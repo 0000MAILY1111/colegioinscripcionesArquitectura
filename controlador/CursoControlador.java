@@ -1,3 +1,4 @@
+package controlador;
 
 import dao.CursoDAO;
 import dao.MateriaDAO;

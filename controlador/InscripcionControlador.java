@@ -1,4 +1,4 @@
-
+package controlador;
 
 import dao.GestionAcademicaDAO;
 import dao.InscripcionDAO;

@@ -1,4 +1,3 @@
-package servicio;
 
 import dao.CursoDAO;
 import dao.MateriaDAO;
@@ -8,7 +7,7 @@ import modelo.Materia;
 import modelo.Paralelo;
 import java.util.List;
 
-public class CursoServicio {
+public class CursoControlador {
     private final CursoDAO dao = new CursoDAO();
 
     public Curso guardar(String nombre, String nivel) {
@@ -26,7 +25,7 @@ public class CursoServicio {
     public List<Curso> listar() { return dao.listar(); }
 }
 
-class ParaleloServicio {
+class ParaleloControlador {
     private final ParaleloDAO dao = new ParaleloDAO();
 
     public Paralelo guardar(String letra, int cupoMaximo, int idCurso) {
@@ -45,7 +44,7 @@ class ParaleloServicio {
     public List<Paralelo> listarPorCurso(int idCurso) { return dao.listarPorCurso(idCurso); }
 }
 
-class MateriaServicio {
+class MateriaControlador {
     private final MateriaDAO dao = new MateriaDAO();
 
     public Materia guardar(String nombre, String descripcion, int cargaHoraria) {

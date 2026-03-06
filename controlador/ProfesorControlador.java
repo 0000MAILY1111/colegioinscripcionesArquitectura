@@ -1,10 +1,9 @@
-package servicio;
 
 import dao.ProfesorDAO;
 import modelo.Profesor;
 import java.util.List;
 
-public class ProfesorServicio {
+public class ProfesorControlador {
 
     private final ProfesorDAO dao = new ProfesorDAO();
 

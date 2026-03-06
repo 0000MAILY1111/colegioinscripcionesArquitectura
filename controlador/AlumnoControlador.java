@@ -1,16 +1,16 @@
-package servicio;
+
 
 import dao.AlumnoDAO;
 import modelo.Alumno;
 import java.util.Date;
 import java.util.List;
 
-public class AlumnoServicio {
+public class AlumnoControlador {
 
     private final AlumnoDAO dao = new AlumnoDAO();
 
     public Alumno registrar(String nombres, String apellidos, String cedula,
-                             Date fechaNacimiento, String direccion, String telefono) {
+            Date fechaNacimiento, String direccion, String telefono) {
         if (nombres == null || nombres.trim().isEmpty())
             throw new IllegalArgumentException("El nombre es obligatorio.");
         if (cedula == null || cedula.trim().isEmpty())
@@ -20,7 +20,7 @@ public class AlumnoServicio {
     }
 
     public Alumno actualizar(int id, String nombres, String apellidos, String cedula,
-                              Date fechaNacimiento, String direccion, String telefono) {
+            Date fechaNacimiento, String direccion, String telefono) {
         Alumno a = new Alumno(id, nombres, apellidos, cedula, fechaNacimiento, direccion, telefono);
         return dao.guardar(a);
     }

@@ -1,4 +1,4 @@
-package servicio;
+
 
 import dao.GestionAcademicaDAO;
 import dao.InscripcionDAO;
@@ -7,7 +7,7 @@ import modelo.Inscripcion;
 import java.util.Date;
 import java.util.List;
 
-public class InscripcionServicio {
+public class InscripcionControlador {
 
     private final InscripcionDAO dao = new InscripcionDAO();
 
@@ -31,7 +31,7 @@ public class InscripcionServicio {
     public List<Inscripcion> listar() { return dao.listar(); }
 }
 
-class GestionAcademicaServicio {
+class GestionAcademicaControlador {
 
     private final GestionAcademicaDAO dao = new GestionAcademicaDAO();
 
